@@ -1,0 +1,157 @@
+/* page layout */
+
+#container {
+    display: flex;
+    justify-content: center;
+}
+
+/* page design */
+
+html {
+    background: url('../images/wallpaper.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/* calculator layout */
+
+#calculator {
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 10px;
+}
+
+#calculatorScreen {
+    height: 68px;
+    max-width: 364px;
+    padding: 5px;
+    padding-right: 15px;
+    padding-top: 12px;
+    margin-bottom: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-overflow: hidden;
+}
+
+#calculatorKeypad {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+button {
+    margin: 0px;
+    min-width: 87px;
+    min-height: 87px;
+}
+
+/* calculator keypad ordering */
+
+#key-1 {
+    order: 13;
+}
+#key-2 {
+    order: 14;
+}
+#key-3 {
+    order: 15;
+}
+#key-4 {
+    order: 9;
+}
+#key-5 {
+    order: 10;
+}
+#key-6 {
+    order: 11;
+}
+#key-7 {
+    order: 5;
+}
+#key-8 {
+    order: 6;
+}
+#key-9 {
+    order: 7;
+}
+#key-0 {
+    order: 17;
+    grid-column: span 2;
+}
+
+#key-plus {
+    order: 12;
+}
+#key-minus {
+    order: 8;
+}
+#key-multiply {
+    order: 4;
+}
+#key-divide {
+    order: 3;
+}
+
+#key-clear {
+    order: 1;
+}
+#key-decimal {
+    order: 18;
+}
+#key-equals {
+    order: 2;
+}
+#key-enter {
+    order: 16;
+    grid-row: span 2;
+}
+
+/* calculator design */
+
+#calculator {
+    background: rgb(79, 79, 79);
+    background: linear-gradient(320deg, #555555, #666666, #707070);
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+#calculatorScreen {
+    background-color: #0a0a0a;
+    border: 2px solid #000000;
+    border-radius: 7px;
+    font-size: 50px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    font-family: arial;
+}
+
+button {
+    background: linear-gradient(150deg, #0f0f0f, #222222);
+    border: 2px solid black;
+    border-radius: 7px;
+    color: #ffffff;
+    font-size: 25px;
+}
+
+#key-enter {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+#key-enter,
+#key-clear {
+    font-size: 18px;
+}
+
+/* button press animation */
+
+button:active {
+    background: linear-gradient(130deg, #0f0f0f, #151515);
+    border: 3px solid black;
+}
