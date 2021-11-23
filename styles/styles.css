@@ -1,140 +1,58 @@
-/* page layout */
-
-#container {
-    display: flex;
-    justify-content: center;
+html {
+    background-color: rgb(26, 24, 62);
 }
 
-/* page design */
+body {
+    font-family: Arial, Helvetica, sans-serif;
 
-html {
     background: url('../images/wallpaper.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover;
+    background-size: cover; 
 }
 
-/* calculator layout */
+#container {
+    width: 100vw;
+    height: 100vh;
 
-#calculator {
-    margin-top: 150px;
-    margin-bottom: 150px;
-    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-#calculatorScreen {
-    height: 68px;
-    max-width: 364px;
-    padding: 5px;
-    padding-right: 15px;
-    padding-top: 12px;
-    margin-bottom: 10px;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-overflow: hidden;
-}
-
-#calculatorKeypad {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-}
-
-button {
-    margin: 0px;
-    min-width: 87px;
-    min-height: 87px;
-}
-
-/* calculator keypad ordering */
-
-#key-1 {
-    order: 13;
-}
-#key-2 {
-    order: 14;
-}
-#key-3 {
-    order: 15;
-}
-#key-4 {
-    order: 9;
-}
-#key-5 {
-    order: 10;
-}
-#key-6 {
-    order: 11;
-}
-#key-7 {
-    order: 5;
-}
-#key-8 {
-    order: 6;
-}
-#key-9 {
-    order: 7;
-}
-#key-0 {
-    order: 17;
-    grid-column: span 2;
-}
-
-#key-plus {
-    order: 12;
-}
-#key-minus {
-    order: 8;
-}
-#key-multiply {
-    order: 4;
-}
-#key-divide {
-    order: 3;
-}
-
-#key-clear {
-    order: 1;
-}
-#key-decimal {
-    order: 18;
-}
-#key-equals {
-    order: 2;
-}
-#key-enter {
-    order: 16;
-    grid-row: span 2;
-}
-
-/* calculator design */
 
 #calculator {
     background: rgb(79, 79, 79);
     background: linear-gradient(320deg, #555555, #666666, #707070);
+    
     border: 2px solid #000000;
-    border-radius: 10px;
+    border-radius: 2vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1vh;
+
+    margin: 2vh;
+    padding: 1vh;
 }
 
 #calculatorScreen {
     background-color: #0a0a0a;
-    border: 2px solid #000000;
-    border-radius: 7px;
-    font-size: 50px;
+    border: .25vh solid black;
+    border-radius: 1vh;
+ 
+    color: white;
+    font-size: 5vh;
     text-align: right;
-    color: rgb(255, 255, 255);
-    font-family: arial;
-}
 
-button {
-    background: linear-gradient(150deg, #0f0f0f, #222222);
-    border: 2px solid black;
-    border-radius: 7px;
-    color: #ffffff;
-    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    
+    padding-right: 2vh;
+    
+    min-height: 8.37vh;
 }
 
 #key-enter {
@@ -146,12 +64,48 @@ button {
 
 #key-enter,
 #key-clear {
-    font-size: 18px;
+    font-size: 2vh;    
 }
 
-/* button press animation */
+button {
+    background: linear-gradient(150deg, #0f0f0f, #222222);
+    border: .25vh solid black;
+    border-radius: 1vh;
+
+    color: #ffffff;
+
+    font-size: 2.5vh;  
+    margin: 0vh;
+    min-width: 8.37vh;
+    min-height: 8.37vh;
+    
+}
 
 button:active {
     background: linear-gradient(130deg, #0f0f0f, #151515);
-    border: 3px solid black;
+    border: .5vh solid black;
 }
+
+
+
+/* calculator keypad ordering */
+
+#calculatorScreen { order: 1; grid-column: span 4;}
+#key-1 { order: 14; }
+#key-2 { order: 15; }
+#key-3 { order: 16; }
+#key-4 { order: 10; }
+#key-5 { order: 12; }
+#key-6 { order: 12; }
+#key-7 { order: 6; }
+#key-8 { order: 7; }
+#key-9 { order: 8; }
+#key-0 { order: 18; grid-column: span 2; }
+#key-plus { order: 13; }
+#key-minus { order: 9; }
+#key-multiply { order: 5; }
+#key-divide { order: 4; }
+#key-clear { order: 2; }
+#key-decimal { order: 19; }
+#key-equals { order: 3; }
+#key-enter { order: 17; grid-row: span 2; }
