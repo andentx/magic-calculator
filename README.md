@@ -41,6 +41,7 @@ of my last input.
 -   Early equals key press disables number presses
 -   Multiple equals key presses not functioning
 -   Background image file size is too large
+-   Clicks using trackpad and tablet are adding space around 'clear' and 'enter' text
 
 ## What's Next
 
