@@ -4,6 +4,7 @@ let displayValue;
 let numberA;
 let selectedOperation;
 let numberB;
+let equationSolved;
 
 const calculatorScreen = document.querySelector('#calculatorScreen');
 const displayText = document.querySelector('#displayText');
@@ -58,6 +59,7 @@ function clearValues() {
     numberA = null;
     selectedOperation = null;
     numberB = null;
+    equationSolved = false;
     updateDisplayValue(displayValue);
 }
 
@@ -68,6 +70,7 @@ function updateDisplayValue(value) {
 }
 
 function handleNumberInput(number) {
+    if (equationSolved) { return };
     if (numberA === null && selectedOperation === null && numberB === null) {
         setNumberA(number);
         return;
@@ -126,6 +129,7 @@ function appendNumberB(number) {
 }
 
 function handleOperatorInput(operator) {
+    if (equationSolved) { equationSolved = false }
     if (numberA === null && selectedOperation === null && numberB === null) {
         return;
     }
@@ -155,6 +159,7 @@ function handleDecimalInput(number) {
 }
 
 function handleEqualsInput() {
+    equationSolved = true;
     solveEquation();
 }
 
