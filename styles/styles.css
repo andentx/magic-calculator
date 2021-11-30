@@ -9,7 +9,7 @@ body {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
-    background-size: cover; 
+    background-size: cover;
 }
 
 #container {
@@ -24,7 +24,7 @@ body {
 #calculator {
     background: rgb(79, 79, 79);
     background: linear-gradient(320deg, #555555, #666666, #707070);
-    
+
     border: 2px solid #000000;
     border-radius: 2vh;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -39,9 +39,9 @@ body {
 
 #calculatorScreen {
     background-color: #0a0a0a;
-    border: .25vh solid black;
+    border: 0.25vh solid black;
     border-radius: 1vh;
- 
+
     color: white;
     font-size: 5vh;
     text-align: right;
@@ -49,9 +49,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    
+
     padding-right: 2vh;
-    
+
     min-height: 8.37vh;
 }
 
@@ -62,31 +62,34 @@ body {
     padding-bottom: 10px;
 }
 
+#key-enter:active {
+    padding-bottom: 8px;
+    color: #ffffffdd;
+}
+
 #key-enter,
 #key-clear {
-    font-size: 2vh;    
+    font-size: 2vh;
 }
 
 button {
     background: linear-gradient(150deg, #0f0f0f, #222222);
-    border: .25vh solid black;
+    border: 0.25vh solid black;
     border-radius: 1vh;
 
     color: #ffffff;
 
-    font-size: 2.5vh;  
+    font-size: 2.5vh;
     margin: 0vh;
     min-width: 8.37vh;
     min-height: 8.37vh;
-    
 }
 
 button:active {
     background: linear-gradient(130deg, #0f0f0f, #151515);
-    border: .5vh solid black;
+    border: 0.5vh solid black;
+    color: #ffffffdd;
 }
-
-
 
 /* calculator keypad ordering */
 
